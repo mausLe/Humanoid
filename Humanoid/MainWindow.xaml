@@ -1,0 +1,291 @@
+﻿<Window x:Name="frmMain" x:Class="Humanoid.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Humanoid"
+        mc:Ignorable="d"
+        Title="Havana" Height="720" Width="1280" Closing="frmMain_Closing">
+    <Grid>
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="#FFF6F9FC"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="230*"/>
+            <ColumnDefinition Width="820*"/>
+            <ColumnDefinition Width="230*"/>
+        </Grid.ColumnDefinitions>
+
+        <!--<Grid.RowDefinitions>
+            <RowDefinition Height ="420*"/>
+            <RowDefinition Height ="50*"/>
+            <RowDefinition Height ="250*"/>
+
+        </Grid.RowDefinitions>-->
+        <Grid Grid.Column="0" Margin="20,20,0, 0" HorizontalAlignment="Left" VerticalAlignment="Top">
+            <ComboBox x:Name="cbbComPort" Margin="110, 0, 0, 0" HorizontalAlignment="Right" Height="30" VerticalAlignment="Top" Width="90"/>
+            <Button x:Name="btnConnect" Content="Connect" HorizontalAlignment="Right" Margin="0,0,105,0" VerticalAlignment="Top" Width="90" RenderTransformOrigin="0.5,0.5" Height="30" FontSize="14" Background="#FF124DCD" Click="btnConnect_Click" BorderBrush="#FF707070" FontWeight="Bold" Foreground="White"  >
+
+                <Button.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="0.029"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Button.RenderTransform>
+            </Button>
+        </Grid>
+        <Grid Margin="20,340,0,0" VerticalAlignment="Top" HorizontalAlignment="Left">
+            <CheckBox x:Name="chbID1" Content="1" Height="15" Margin="65,30,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Width="50" Checked="chbID1_Checked" Unchecked="chbID1_Unchecked"/>
+            <CheckBox x:Name="chbID2" Content="2" Height="15" Margin="65,60,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Width="50" Checked="chbID2_Checked" Unchecked="chbID2_Unchecked"/>
+            <CheckBox x:Name="chbID3" Content="3" Height="15" Margin="65,90,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Width="50" Checked="chbID3_Checked" Unchecked="chbID3_Unchecked"/>
+            <CheckBox x:Name="chbID4" Content="4" Height="15" Margin="65,120,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Width="50" Checked="chbID4_Checked" Unchecked="chbID4_Unchecked"/>
+            <CheckBox x:Name="chbID5" Content="5" Height="15" Margin="65,150,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Width="50" Checked="chbID5_Checked" Unchecked="chbID5_Unchecked"/>
+            <CheckBox x:Name="chbID6" Content="6" Height="15" Margin="65,180,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Width="50" Checked="chbID6_Checked" Unchecked="chbID6_Unchecked"/>
+
+            <CheckBox x:Name="chbID7" Content="7" Height="15" Margin="65,210,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Width="50" Checked="chbID7_Checked" Unchecked="chbID7_Unchecked"/>
+            <CheckBox x:Name="chbID8" Content="8" Height="15" Margin="65,240,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Width="50" Checked="chbID8_Checked" Unchecked="chbID8_Unchecked"/>
+            <CheckBox x:Name="chbID9" Content="9" Height="15" Margin="65,270,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Width="50" Checked="chbID9_Checked" Unchecked="chbID9_Unchecked"/>
+            <CheckBox x:Name="chbID10" Content="10" Height="15" Margin="65,300,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Width="50" Checked="chbID10_Checked" Unchecked="chbID10_Unchecked"/>
+
+            <CheckBox x:Name="chbID11" Content="11" Height="15" Margin="135,30,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Width="50" Checked="chbID11_Checked" Unchecked="chbID11_Unchecked"/>
+            <CheckBox x:Name="chbID12" Content="12" Height="15" Margin="135,60,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Width="50" Checked="chbID12_Checked" Unchecked="chbID12_Unchecked"/>
+            <CheckBox x:Name="chbID13" Content="13" Height="15" Margin="135,90,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Width="50" Checked="chbID13_Checked" Unchecked="chbID13_Unchecked"/>
+            <CheckBox x:Name="chbID14" Content="14" Height="15" Margin="135,120,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Width="50" Checked="chbID14_Checked" Unchecked="chbID14_Unchecked"/>
+            <CheckBox x:Name="chbID15" Content="15" Height="15" Margin="135,150,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Width="50" Checked="chbID15_Checked" Unchecked="chbID15_Unchecked"/>
+            <CheckBox x:Name="chbID16" Content="16" Height="15" Margin="135,180,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Width="50" Checked="chbID16_Checked" Unchecked="chbID16_Unchecked"/>
+
+            <CheckBox x:Name="chbID17" Content="17" Height="15" Margin="135,210,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Width="50" Checked="chbID17_Checked" Unchecked="chbID17_Unchecked"/>
+            <CheckBox x:Name="chbID18" Content="18" Height="15" Margin="135,240,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Width="50" Checked="chbID18_Checked" Unchecked="chbID18_Unchecked"/>
+            <CheckBox x:Name="chbID19" Content="19" Height="15" Margin="135,270,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Width="50" Checked="chbID19_Checked" Unchecked="chbID19_Unchecked"/>
+            <CheckBox x:Name="chbID20" Content="20" Height="15" Margin="135,300,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Width="50"  Checked="chbID20_Checked" Unchecked="chbID20_Unchecked"/>
+            <CheckBox x:Name="chbSelectAll" Content="Select All" Height="15" HorizontalAlignment="Left" VerticalAlignment="Top" Width="70" Click="chbSelectAll_Click" />
+
+        </Grid>
+        <Grid Margin="20,100,0, 0" Grid.ColumnSpan="2" VerticalAlignment="Top" HorizontalAlignment="Left">
+
+            <Button x:Name="btnGetBattery" Content="Get Battery" Height="30" HorizontalAlignment="Left" VerticalAlignment="Top" Width="90" FontSize="16" Background="#FF124DCD" Click="btnGetBattery_Click" FontWeight="Bold" Foreground="White" Margin="5,0,0,0"/>
+            <TextBox x:Name="txtPinView" Height="30" Margin="110,0,0,0" TextWrapping="Wrap" HorizontalAlignment="Left" VerticalAlignment="Top" Width="90" BorderBrush="#FF3D63D3"/>
+        </Grid>
+        <Grid Grid.Column="2" Margin="0,115,20,0" Background="#FF21B14B" HorizontalAlignment="Right" VerticalAlignment="Top" Height="205">
+
+            <TextBlock HorizontalAlignment="Right" Height="30" Margin="0,25,100,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="95" Text="Time" FontSize="16" TextAlignment="Center" FontWeight="Bold" Foreground="White"/>
+            <TextBox x:Name="txbActionTime" Height="30" Margin="0,25,40,0" TextWrapping="Wrap" Text="1000" HorizontalAlignment="Right" VerticalAlignment="Top" RenderTransformOrigin="2.273,1.167" Width="50" FontSize="16" TextAlignment="Center"/>
+            <TextBlock HorizontalAlignment="Right" Height="30" Margin="0,25,0,0" TextWrapping="Wrap" Text="ms" VerticalAlignment="Top" Width="30" Foreground="White" FontWeight="Bold" FontSize="16"/>
+            <TextBlock Text="Action" HorizontalAlignment="Right" Height="20" Margin="5,0,150,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="49"  FontSize="10" TextAlignment="Center" FontWeight="Bold" Foreground="White"/>
+
+            <Button x:Name="btnAddAction" Content="Add" HorizontalAlignment="Right" Height="30" Margin="5,70,110,0" VerticalAlignment="Top" Width="90" RenderTransformOrigin="1,2.333" Click="btnAddAction_Click" Background="#FF124DCD" FontSize="14" BorderBrush="{x:Null}" FontWeight="Bold" Foreground="White"/>
+            <Button x:Name="btnRemove" Content="Remove" HorizontalAlignment="Right" Height="30" Margin="0,70,5,0" VerticalAlignment="Top" Width="90" RenderTransformOrigin="1,2.333" Background="#FF124DCD" FontSize="14" Foreground="White" BorderBrush="{x:Null}" FontWeight="Bold" Click="btnRemove_Click"/>
+            <Button x:Name="btnUpdate" Content="Update" HorizontalAlignment="Right" Height="30" Margin="5,120,110,5" VerticalAlignment="Top" Width="90" RenderTransformOrigin="1,2.333" Background="#FF124DCD" FontSize="14" BorderBrush="{x:Null}" FontWeight="Bold" Foreground="White" Click="btnUpdate_Click"/>
+            <Button x:Name="btnEditTime" Content="Edit Time" HorizontalAlignment="Right" Height="30" Margin="5,170,5,5" VerticalAlignment="Top" Width="90" RenderTransformOrigin="1,2.333" Background="#FF124DCD" FontSize="14" BorderBrush="{x:Null}" FontWeight="Bold" Foreground="White" Click="btnEditTime_Click"/>
+            <Button x:Name="btnClearAction" Content="Clear" HorizontalAlignment="Left" Height="30" Margin="5,170,5,0" VerticalAlignment="Top" Width="90" Foreground="White" FontWeight="Bold" FontSize="16" BorderBrush="{x:Null}" Background="#FF124DCD" Click="btnClear_Click"/>
+            <Button x:Name="btnInsert" Content="Insert" HorizontalAlignment="Right" Height="30" Margin="0,120,5,5" VerticalAlignment="Top" Width="90" RenderTransformOrigin="1,2.333" Background="#FF124DCD" FontSize="14" Foreground="White" FontWeight="Bold" BorderBrush="{x:Null}" Click="btnInsert_Click"/>
+        </Grid>
+        <Grid Grid.Column="2" Margin="0,340,19.6,0" Background="#FF21B14B" HorizontalAlignment="Right" Width="205" Height="85" VerticalAlignment="Top" >
+            <Button x:Name="btnRun" Content="Run Line" HorizontalAlignment="Right" Height="30" VerticalAlignment="Top" Width="90" Background="#FF124DCD" FontSize="16" BorderBrush="{x:Null}" FontWeight="Bold" Foreground="White" Margin="0,5,5,0" Click="btnRun_Click"/>
+            <Button x:Name="btnStop" Content="Stop" HorizontalAlignment="Left" Margin="110,50,0,5" Width="90" Background="#FF124DCD" FontSize="16" Click="btnStop_Click" Foreground="White" FontWeight="Bold" BorderBrush="{x:Null}"/>
+            <CheckBox x:Name="chbLoop" Content="Loop" HorizontalAlignment="Right" Height="30" Margin="0,0,110,50" VerticalAlignment="Bottom" Width="90" FontSize="16" FontWeight="Bold" Background="White" Foreground="White"/>
+            <Button x:Name="btnRunSingle" Content="Run Single" HorizontalAlignment="Right" Height="30" Margin="0,50,110,5" VerticalAlignment="Top" Width="90" Background="#FF124DCD"  FontSize="16" FontWeight="Bold" BorderBrush="{x:Null}" Foreground="#FFFDFDFD" Click="btnRunSingle_Click"/>
+        </Grid>
+        <Grid Grid.Column="0" Margin="20,180,0, 0" Background="#FF21B14B" HorizontalAlignment="Left" VerticalAlignment="Top" Width="205">
+            <Button x:Name="btnSave" Content="Save" HorizontalAlignment="right" Margin="5,75,110,5" Width="90" Background="#FF124DCD" Click="btnSave_Click" Foreground="White" FontWeight="Bold" FontSize="16" BorderBrush="{x:Null}" Height="30"/>
+            <Button x:Name="btnOpen" Content="Open" HorizontalAlignment="right" Height="30" Width="90" Margin="5,25,110,0" VerticalAlignment="Top" Click="btnOpen_Click" Background="#FF124DCD" BorderBrush="{x:Null}" FontWeight="Bold" Foreground="White" FontSize="16"/>
+            <TextBlock Text="Acton Group" HorizontalAlignment="Right" Height="15" Margin="0,0,113.8,85.6" TextWrapping="Wrap" VerticalAlignment="Bottom" Width="86"  FontSize="10" TextAlignment="Center" FontWeight="Bold" Foreground="White"/>
+            <Button x:Name="btnSeries" Content="Series" Height="30" Margin="110,25,0,0" VerticalAlignment="Top"  Background="#FF124DCD" BorderBrush="{x:Null}" FontWeight="Bold" Foreground="White" FontSize="16" HorizontalAlignment="Left" Width="90" Click="btnSeries_Click"/>
+            <Button x:Name="btnClear" Content="Clear" HorizontalAlignment="Left" Height="30" Margin="110,75,5,0" VerticalAlignment="Top" Width="90" Foreground="White" FontWeight="Bold" FontSize="16" BorderBrush="{x:Null}" Background="#FF124DCD" Click="btnClear_Click"/>
+
+        </Grid>
+
+        <Grid x:Name="grid1"  Height="60" Width="170" Margin="20,20,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Background="#FF21B14B" Grid.Column="1">
+            <Slider x:Name="sliPosition1" HorizontalAlignment="Left" Height="20" Margin="45,5,0,0" VerticalAlignment="Top" Width="120" Background="#FF124DCD" Maximum="1000" ValueChanged="sliPosition1_ValueChanged" Value="500" IsSnapToTickEnabled="True"/>
+            <TextBox x:Name="txbSliderPosition1" Width="60" Margin="105,35,0,0" Text="{Binding Value, ElementName=sliPosition1}" Height="20" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+            <TextBlock Height="20" Margin="45,35,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="30" Text="Pos" FontSize="14" TextAlignment="Center" FontWeight="Bold" HorizontalAlignment="Left" Foreground="White"/>
+            <TextBlock Height="20" Margin="5,5,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="30" Text="ID 1" FontSize="14" TextAlignment="Center" FontWeight="Bold" HorizontalAlignment="Left" Foreground="White"/>
+
+
+        </Grid>
+        <Grid x:Name="grid2"  Height="60" Width="170" Margin="200,20,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Background="#FF21B14B" Grid.Column="1">
+            <Slider x:Name="sliPosition2" HorizontalAlignment="Left" Height="20" Margin="45,5,0,0" VerticalAlignment="Top" Width="120" Background="#FF124DCD" Maximum="1000" ValueChanged="sliPosition2_ValueChanged" Value="500" SmallChange="1" LargeChange="5" IsSnapToTickEnabled="True"/>
+            <TextBox x:Name="txbSliderPosition2" Width="60" Margin="105,35,0,0" Text="{Binding Value, ElementName=sliPosition2}" Height="20" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+            <TextBlock Height="20" Margin="45,35,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="30" Text="Pos" FontSize="14" TextAlignment="Center" FontWeight="Bold" HorizontalAlignment="Left" Foreground="White"/>
+            <TextBlock Height="20" Margin="5,5,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="30" Text="ID 2" FontSize="14" TextAlignment="Center" FontWeight="Bold" HorizontalAlignment="Left" Foreground="White"/>
+
+
+        </Grid>
+        <Grid x:Name="grid3"  Height="60" Width="170" Margin="380,20,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Background="#FF21B14B" Grid.Column="1">
+            <Slider x:Name="sliPosition3" HorizontalAlignment="Left" Height="20" Margin="45,5,0,0" VerticalAlignment="Top" Width="120" Background="#FF124DCD" Maximum="1000" ValueChanged="sliPosition3_ValueChanged" Value="500" IsSnapToTickEnabled="True"/>
+            <TextBox x:Name="txbSliderPosition3" Width="60" Margin="105,35,0,0" Text="{Binding Value, ElementName=sliPosition3}" Height="20" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+            <TextBlock Height="20" Margin="45,35,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="30" Text="Pos" FontSize="14" TextAlignment="Center" FontWeight="Bold" HorizontalAlignment="Left" Foreground="White"/>
+            <TextBlock Text="ID 3" Height="20" Margin="5,5,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="30" FontSize="14" TextAlignment="Center" FontWeight="Bold" HorizontalAlignment="Left" Foreground="White"/>
+
+
+        </Grid>
+        <Grid x:Name="grid4"  Height="60" Width="170" Margin="560,20,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Background="#FF21B14B" Grid.Column="1">
+            <Slider x:Name="sliPosition4" HorizontalAlignment="Left" Height="20" Margin="45,5,0,0" VerticalAlignment="Top" Width="120" Background="#FF124DCD" Maximum="1000" ValueChanged="sliPosition4_ValueChanged" Value="500" IsSnapToTickEnabled="True"/>
+            <TextBox x:Name="txbSliderPosition4" Width="60" Margin="105,35,0,0" Text="{Binding Value, ElementName=sliPosition4}" Height="20" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+            <TextBlock Height="20" Margin="45,35,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="30" Text="Pos" FontSize="14" TextAlignment="Center" FontWeight="Bold" HorizontalAlignment="Left" Foreground="White"/>
+            <TextBlock Text="ID 4" Height="20" Margin="5,5,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="30" FontSize="14" TextAlignment="Center" FontWeight="Bold" HorizontalAlignment="Left" Foreground="White"/>
+
+
+        </Grid>
+        <Grid x:Name="grid5"  Height="60" Width="170" Margin="20,100,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Background="#FF21B14B" Grid.Column="1">
+            <Slider x:Name="sliPosition5" HorizontalAlignment="Left" Height="20" Margin="45,5,0,0" VerticalAlignment="Top" Width="120" Background="#FF124DCD" Maximum="1000" ValueChanged="sliPosition5_ValueChanged" Value="500" IsSnapToTickEnabled="True"/>
+            <TextBox x:Name="txbSliderPosition5" Width="60" Margin="105,35,0,0" Text="{Binding Value, ElementName=sliPosition5}" Height="20" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+            <TextBlock Height="20" Margin="45,35,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="30" Text="Pos" FontSize="14" TextAlignment="Center" FontWeight="Bold" HorizontalAlignment="Left" Foreground="White"/>
+            <TextBlock Height="20" Margin="5,5,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="30" Text="ID 5" FontSize="14" TextAlignment="Center" FontWeight="Bold" HorizontalAlignment="Left" Foreground="White"/>
+
+
+        </Grid>
+        <Grid x:Name="grid6"  Height="60" Width="170" Margin="200,100,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Background="#FF21B14B" Grid.Column="1">
+            <Slider x:Name="sliPosition6" HorizontalAlignment="Left" Height="20" Margin="45,5,0,0" VerticalAlignment="Top" Width="120" Background="#FF124DCD" Maximum="1000" ValueChanged="sliPosition6_ValueChanged" Value="500" IsSnapToTickEnabled="True"/>
+            <TextBox x:Name="txbSliderPosition6" Width="60" Margin="105,35,0,0" Text="{Binding Value, ElementName=sliPosition6}" Height="20" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+            <TextBlock Height="20" Margin="45,35,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="30" Text="Pos" FontSize="14" TextAlignment="Center" FontWeight="Bold" HorizontalAlignment="Left" Foreground="White"/>
+            <TextBlock Height="20" Margin="5,5,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="30" Text="ID 6" FontSize="14" TextAlignment="Center" FontWeight="Bold" HorizontalAlignment="Left" Foreground="White"/>
+
+
+        </Grid>
+        <Grid x:Name="grid7"  Height="60" Width="170" Margin="380,100,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Background="#FF21B14B" Grid.Column="1">
+            <Slider x:Name="sliPosition7" HorizontalAlignment="Left" Height="20" Margin="45,5,0,0" VerticalAlignment="Top" Width="120" Background="#FF124DCD" Maximum="1000" ValueChanged="sliPosition7_ValueChanged" Value="500" IsSnapToTickEnabled="True"/>
+            <TextBox x:Name="txbSliderPosition7" Width="60" Margin="105,35,0,0" Text="{Binding Value, ElementName=sliPosition7}" Height="20" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+            <TextBlock Height="20" Margin="45,35,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="30" Text="Pos" FontSize="14" TextAlignment="Center" FontWeight="Bold" HorizontalAlignment="Left" Foreground="White"/>
+            <TextBlock Text="ID 7" Height="20" Margin="5,5,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="30" FontSize="14" TextAlignment="Center" FontWeight="Bold" HorizontalAlignment="Left" Foreground="White"/>
+
+
+        </Grid>
+        <Grid x:Name="grid8"  Height="60" Width="170" Margin="560,100,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Background="#FF21B14B" Grid.Column="1">
+            <Slider x:Name="sliPosition8" HorizontalAlignment="Left" Height="20" Margin="45,5,0,0" VerticalAlignment="Top" Width="120" Background="#FF124DCD" Maximum="1000" ValueChanged="sliPosition8_ValueChanged" Value="500" IsSnapToTickEnabled="True"/>
+            <TextBox x:Name="txbSliderPosition8" Width="60" Margin="105,35,0,0" Text="{Binding Value, ElementName=sliPosition8}" Height="20" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+            <TextBlock Height="20" Margin="45,35,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="30" Text="Pos" FontSize="14" TextAlignment="Center" FontWeight="Bold" HorizontalAlignment="Left" Foreground="White"/>
+            <TextBlock Text="ID 8" Height="20" Margin="5,5,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="30" FontSize="14" TextAlignment="Center" FontWeight="Bold" HorizontalAlignment="Left" Foreground="White"/>
+
+
+        </Grid>
+        <Grid x:Name="grid9"  Height="60" Width="170" Margin="20,180,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Background="#FF21B14B" Grid.Column="1">
+            <Slider x:Name="sliPosition9" HorizontalAlignment="Left" Height="20" Margin="45,5,0,0" VerticalAlignment="Top" Width="120" Background="#FF124DCD" Maximum="1000" ValueChanged="sliPosition9_ValueChanged" Value="500" IsSnapToTickEnabled="True"/>
+            <TextBox x:Name="txbSliderPosition9" Width="60" Margin="105,35,0,0" Text="{Binding Value, ElementName=sliPosition9}" Height="20" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+            <TextBlock Height="20" Margin="45,35,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="30" Text="Pos" FontSize="14" TextAlignment="Center" FontWeight="Bold" HorizontalAlignment="Left" Foreground="White"/>
+            <TextBlock Height="20" Margin="5,5,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="30" Text="ID 9" FontSize="14" TextAlignment="Center" FontWeight="Bold" HorizontalAlignment="Left" Foreground="White"/>
+
+
+        </Grid>
+        <Grid x:Name="grid10"  Height="60" Width="170" Margin="200,180,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Background="#FF21B14B" Grid.Column="1">
+            <Slider x:Name="sliPosition10" HorizontalAlignment="Left" Height="20" Margin="45,5,0,0" VerticalAlignment="Top" Width="120" Background="#FF124DCD" Maximum="1000" ValueChanged="sliPosition10_ValueChanged" Value="500" IsSnapToTickEnabled="True"/>
+            <TextBox x:Name="txbSliderPosition10" Width="60" Margin="105,35,0,0" Text="{Binding Value, ElementName=sliPosition10}" Height="20" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+            <TextBlock Height="20" Margin="45,35,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="30" Text="Pos" FontSize="14" TextAlignment="Center" FontWeight="Bold" HorizontalAlignment="Left" Foreground="White"/>
+            <TextBlock Height="20" Margin="5,5,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="37" Text="ID 10" FontSize="14" TextAlignment="Center" FontWeight="Bold" HorizontalAlignment="Left" Foreground="White"/>
+
+
+        </Grid>
+        <Grid x:Name="grid11"  Height="60" Width="170" Margin="380,180,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Background="#FF21B14B" Grid.Column="1">
+            <Slider x:Name="sliPosition11" HorizontalAlignment="Left" Height="20" Margin="45,5,0,0" VerticalAlignment="Top" Width="120" Background="#FF124DCD" Maximum="1000" ValueChanged="sliPosition11_ValueChanged" Value="500" IsSnapToTickEnabled="True"/>
+            <TextBox x:Name="txbSliderPosition11" Width="60" Margin="105,35,0,0" Text="{Binding Value, ElementName=sliPosition11}" Height="20" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+            <TextBlock Height="20" Margin="45,35,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="30" Text="Pos" FontSize="14" TextAlignment="Center" FontWeight="Bold" HorizontalAlignment="Left" Foreground="White"/>
+            <TextBlock Text="ID 11" Margin="5,5,0,35" TextWrapping="Wrap" Width="36" FontSize="14" TextAlignment="Center" FontWeight="Bold" HorizontalAlignment="Left" Foreground="White"/>
+
+
+        </Grid>
+        <Grid x:Name="grid12"  Height="60" Width="170" Margin="560,180,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Background="#FF21B14B" Grid.Column="1">
+            <Slider x:Name="sliPosition12" HorizontalAlignment="Left" Height="20" Margin="45,0,0,35" VerticalAlignment="Bottom" Width="120" Background="#FF124DCD" Maximum="1000" ValueChanged="sliPosition12_ValueChanged" Value="500" IsSnapToTickEnabled="True"/>
+            <TextBox x:Name="txbSliderPosition12" Width="60" Margin="105,35,0,0" Text="{Binding Value, ElementName=sliPosition12}" Height="20" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+            <TextBlock Height="20" Margin="45,35,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="30" Text="Pos" FontSize="14" TextAlignment="Center" FontWeight="Bold" HorizontalAlignment="Left" Foreground="White"/>
+            <TextBlock Text="ID 12" Height="20" Margin="5,5,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="36" FontSize="14" TextAlignment="Center" FontWeight="Bold" HorizontalAlignment="Left" Foreground="White"/>
+
+
+        </Grid>
+        <Grid x:Name="grid13"  Height="60" Width="170" Margin="20,260,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Background="#FF21B14B" Grid.Column="1">
+            <Slider x:Name="sliPosition13" HorizontalAlignment="Left" Height="20" Margin="45,5,0,0" VerticalAlignment="Top" Width="120" Background="#FF124DCD" Maximum="1000" ValueChanged="sliPosition13_ValueChanged" Value="500" IsSnapToTickEnabled="True"/>
+            <TextBox x:Name="txbSliderPosition13" Width="60" Margin="105,35,0,0" Text="{Binding Value, ElementName=sliPosition13}" Height="20" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+            <TextBlock Height="20" Margin="45,35,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="30" Text="Pos" FontSize="14" TextAlignment="Center" FontWeight="Bold" HorizontalAlignment="Left" Foreground="White"/>
+            <TextBlock Height="20" Margin="5,5,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="36" Text="ID 13" FontSize="14" TextAlignment="Center" FontWeight="Bold" HorizontalAlignment="Left" Foreground="White"/>
+
+
+        </Grid>
+        <Grid x:Name="grid14"  Height="60" Width="170" Margin="200,260,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Background="#FF21B14B" Grid.Column="1">
+            <Slider x:Name="sliPosition14" HorizontalAlignment="Left" Height="20" Margin="45,5,0,0" VerticalAlignment="Top" Width="120" Background="#FF124DCD" Maximum="1000" ValueChanged="sliPosition14_ValueChanged" Value="500" IsSnapToTickEnabled="True"/>
+            <TextBox x:Name="txbSliderPosition14" Width="60" Margin="105,35,0,0" Text="{Binding Value, ElementName=sliPosition14}" Height="20" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+            <TextBlock Height="20" Margin="45,35,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="30" Text="Pos" FontSize="14" TextAlignment="Center" FontWeight="Bold" HorizontalAlignment="Left" Foreground="White"/>
+            <TextBlock Height="20" Margin="5,5,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="37" Text="ID 14" FontSize="14" TextAlignment="Center" FontWeight="Bold" HorizontalAlignment="Left" Foreground="White"/>
+
+
+        </Grid>
+        <Grid x:Name="grid15"  Height="60" Width="170" Margin="380,260,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Background="#FF21B14B" Grid.Column="1">
+            <Slider x:Name="sliPosition15" HorizontalAlignment="Left" Height="20" Margin="45,5,0,0" VerticalAlignment="Top" Width="120" Background="#FF124DCD" Maximum="1000" ValueChanged="sliPosition15_ValueChanged" Value="500" IsSnapToTickEnabled="True"/>
+            <TextBox x:Name="txbSliderPosition15" Width="60" Margin="105,35,0,0" Text="{Binding Value, ElementName=sliPosition15}" Height="20" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+            <TextBlock Height="20" Margin="45,35,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="30" Text="Pos" FontSize="14" TextAlignment="Center" FontWeight="Bold" HorizontalAlignment="Left" Foreground="White"/>
+            <TextBlock Text="ID 15" Height="20" Margin="5,5,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="36" FontSize="14" TextAlignment="Center" FontWeight="Bold" HorizontalAlignment="Left" Foreground="White"/>
+
+
+        </Grid>
+        <Grid x:Name="grid16"  Height="60" Width="170" Margin="560,260,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Background="#FF21B14B" Grid.Column="1">
+            <Slider x:Name="sliPosition16" HorizontalAlignment="Left" Height="20" Margin="45,5,0,0" VerticalAlignment="Top" Width="120" Background="#FF124DCD" Maximum="1000" ValueChanged="sliPosition16_ValueChanged" Value="500" IsSnapToTickEnabled="True"/>
+            <TextBox x:Name="txbSliderPosition16" Width="60" Margin="105,35,0,0" Text="{Binding Value, ElementName=sliPosition16}" Height="20" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+            <TextBlock Height="20" Margin="45,35,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="30" Text="Pos" FontSize="14" TextAlignment="Center" FontWeight="Bold" HorizontalAlignment="Left" Foreground="White"/>
+            <TextBlock Text="ID 16" Height="20" Margin="5,5,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="36" FontSize="14" TextAlignment="Center" FontWeight="Bold" HorizontalAlignment="Left" Foreground="White"/>
+
+
+        </Grid>
+        <Grid x:Name="grid17"  Height="60" Width="170" Margin="20,340,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Background="#FF21B14B" Grid.Column="1">
+            <Slider x:Name="sliPosition17" HorizontalAlignment="Left" Height="20" Margin="45,5,0,0" VerticalAlignment="Top" Width="120" Background="#FF124DCD" Maximum="1000" ValueChanged="sliPosition17_ValueChanged" Value="500" IsSnapToTickEnabled="True"/>
+            <TextBox x:Name="txbSliderPosition17" Width="60" Margin="105,35,0,0" Text="{Binding Value, ElementName=sliPosition17}" Height="20" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+            <TextBlock Height="20" Margin="45,35,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="30" Text="Pos" FontSize="14" TextAlignment="Center" FontWeight="Bold" HorizontalAlignment="Left" Foreground="White"/>
+            <TextBlock Height="20" Margin="5,5,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="36" Text="ID 17" FontSize="14" TextAlignment="Center" FontWeight="Bold" HorizontalAlignment="Left" Foreground="White"/>
+
+
+        </Grid>
+        <Grid x:Name="grid18"  Height="60" Width="170" Margin="200,340,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Background="#FF21B14B" Grid.Column="1">
+            <Slider x:Name="sliPosition18" HorizontalAlignment="Left" Height="20" Margin="45,5,0,0" VerticalAlignment="Top" Width="120" Background="#FF124DCD" Maximum="1000" ValueChanged="sliPosition18_ValueChanged" Value="500" IsSnapToTickEnabled="True"/>
+            <TextBox x:Name="txbSliderPosition18" Width="60" Margin="105,35,0,0" Text="{Binding Value, ElementName=sliPosition18}" Height="20" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+            <TextBlock Height="20" Margin="45,35,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="30" Text="Pos" FontSize="14" TextAlignment="Center" FontWeight="Bold" HorizontalAlignment="Left" Foreground="White"/>
+            <TextBlock Height="20" Margin="5,5,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="37" Text="ID 18" FontSize="14" TextAlignment="Center" FontWeight="Bold" HorizontalAlignment="Left" Foreground="White"/>
+
+
+        </Grid>
+        <Grid x:Name="grid19"  Height="60" Width="170" Margin="380,340,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Background="#FF21B14B" Grid.Column="1">
+            <Slider x:Name="sliPosition19" HorizontalAlignment="Left" Height="20" Margin="45,5,0,0" VerticalAlignment="Top" Width="120" Background="#FF124DCD" Maximum="1000" ValueChanged="sliPosition19_ValueChanged" Value="500" IsSnapToTickEnabled="True"/>
+            <TextBox x:Name="txbSliderPosition19" Width="60" Margin="105,35,0,0" Text="{Binding Value, ElementName=sliPosition19}" Height="20" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+            <TextBlock Height="20" Margin="45,35,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="30" Text="Pos" FontSize="14" TextAlignment="Center" FontWeight="Bold" HorizontalAlignment="Left" Foreground="White"/>
+            <TextBlock Text="ID 19" Height="20" Margin="5,5,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="36" FontSize="14" TextAlignment="Center" FontWeight="Bold" HorizontalAlignment="Left" Foreground="White"/>
+
+
+        </Grid>
+        <Grid x:Name="grid20"  Height="60" Width="170" Margin="560,340,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Background="#FF21B14B" Grid.Column="1">
+            <Slider x:Name="sliPosition20" HorizontalAlignment="Left" Height="20" Margin="45,5,0,0" VerticalAlignment="Top" Width="120" Background="#FF124DCD" Maximum="1000" ValueChanged="sliPosition20_ValueChanged" Value="500" IsSnapToTickEnabled="True"/>
+            <TextBox x:Name="txbSliderPosition20" Width="60" Margin="105,35,0,0" Text="{Binding Value, ElementName=sliPosition20}" Height="20" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+            <TextBlock Height="20" Margin="45,35,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="30" Text="Pos" FontSize="14" TextAlignment="Center" FontWeight="Bold" HorizontalAlignment="Left" Foreground="White"/>
+            <TextBlock Text="ID 20" Height="20" Margin="5,5,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="36" FontSize="14" TextAlignment="Center" FontWeight="Bold" HorizontalAlignment="Left" Foreground="White"/>
+
+
+        </Grid>
+        <!--<ListView x:Name="livAction" HorizontalAlignment="Left" Height="250" Margin="20,430,0,0" VerticalAlignment="Top" Width="740" Grid.Column="1" ItemsSource="{Binding }">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Index" Width="50" DisplayMemberBinding="{Binding IndexPro}"/>
+                    <GridViewColumn Header="Time (ms)" Width="100" DisplayMemberBinding="{Binding TimePro}"/>
+                    <GridViewColumn Header="Action" Width="590" DisplayMemberBinding="{Binding ActionPro}"/>
+
+                </GridView>
+            </ListView.View>
+        </ListView>-->
+
+        <ListView Grid.Column="1" x:Name="livAction" ItemsSource="{Binding TrackCollection}" HorizontalAlignment="Left" Height="240" Margin="20.2,430,0,0" VerticalAlignment="Top" Width="1000" Grid.ColumnSpan="2" Background="#FFB9F4BC" Foreground="#FF6974E4"  >
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Index" Width="50" DisplayMemberBinding="{Binding IndexPro}"/>
+                    <GridViewColumn Header="Time (ms)" Width="60" DisplayMemberBinding="{Binding TimePro}"/>
+                    <GridViewColumn Header="Action" Width="890" DisplayMemberBinding="{Binding ActionPro}"/>
+
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <Grid Grid.Column="2" Background="#FF21B14B" Margin="0,20,20,0" HorizontalAlignment="Right" VerticalAlignment="Top" Height="75" Width="205">
+            <Button x:Name="btnOff" Content="Motor Off" HorizontalAlignment="Right" Height="30" Margin="5,5,110,5" Background="#FF124DCD" FontSize="14" VerticalAlignment="Top" Width="90" BorderBrush="{x:Null}" FontWeight="Bold" Foreground="White" Click="btnOff_Click"/>
+            <Button x:Name="btnRead" Content="Read Angle" HorizontalAlignment="Right" Height="30" VerticalAlignment="Top" Width="90" Margin="0,5,6,0" Background="#FF124DCD" FontSize="14" BorderBrush="{x:Null}" FontWeight="Bold" Foreground="White" Click="btnRead_Click"/>
+            <Button x:Name="btnUpdateAngle" Content="Update Angle" HorizontalAlignment="Right" Height="30" VerticalAlignment="Top" Width="90" Margin="0,40,5,0" Background="#FF124DCD" BorderBrush="{x:Null}" FontWeight="Bold" Foreground="White" Click="btnUpdateAngle_Click"/>
+
+        </Grid>
+
+    </Grid>
+</Window>

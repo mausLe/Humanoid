@@ -1,0 +1,15 @@
+C:\Users\ACER\source\repos\Humanoid\Humanoid\bin\Release\Humanoid.exe.config
+C:\Users\ACER\source\repos\Humanoid\Humanoid\bin\Release\Humanoid.exe
+C:\Users\ACER\source\repos\Humanoid\Humanoid\bin\Release\Humanoid.pdb
+C:\Users\ACER\source\repos\Humanoid\Humanoid\obj\Release\MainWindow.g.cs
+C:\Users\ACER\source\repos\Humanoid\Humanoid\obj\Release\App.g.cs
+C:\Users\ACER\source\repos\Humanoid\Humanoid\obj\Release\Humanoid_MarkupCompile.cache
+C:\Users\ACER\source\repos\Humanoid\Humanoid\obj\Release\Humanoid_MarkupCompile.lref
+C:\Users\ACER\source\repos\Humanoid\Humanoid\obj\Release\MainWindow.baml
+C:\Users\ACER\source\repos\Humanoid\Humanoid\obj\Release\Humanoid.g.resources
+C:\Users\ACER\source\repos\Humanoid\Humanoid\obj\Release\Humanoid.Properties.Resources.resources
+C:\Users\ACER\source\repos\Humanoid\Humanoid\obj\Release\Humanoid.csproj.GenerateResource.cache
+C:\Users\ACER\source\repos\Humanoid\Humanoid\obj\Release\Humanoid.csproj.CoreCompileInputs.cache
+C:\Users\ACER\source\repos\Humanoid\Humanoid\obj\Release\Humanoid.exe
+C:\Users\ACER\source\repos\Humanoid\Humanoid\obj\Release\Humanoid.pdb
+C:\Users\ACER\source\repos\Humanoid\Humanoid\obj\Release\Humanoid.csprojAssemblyReference.cache
