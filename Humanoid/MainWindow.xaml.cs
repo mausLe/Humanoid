@@ -19,6 +19,7 @@ using System.Threading;
 using System.IO;
 using System.Media;
 using Microsoft.Win32;
+using System.Diagnostics;
 
 namespace Humanoid
 {
@@ -107,7 +108,6 @@ namespace Humanoid
             grid20.Visibility = Visibility.Hidden;
 
             myIndex = new List<ActionIndex>();
-
         }
         
         private void btnConnect_Click(object sender, RoutedEventArgs e)
